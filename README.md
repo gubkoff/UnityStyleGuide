@@ -1,24 +1,23 @@
 # Unity Style Guide
 
-This article contains ideas for setting up a projects structure and a naming convention for scripts and assets in Unity.
-
+В этой статье содержатся идеи по настройке структуры проектов и правил именования скриптов и ассетов в Unity.
 <a name="toc"></a>
-## Table of Contents
+## Содержание
 
-> 1. [Introduction](#introduction)
-> 1. [Project Structure](#structure)
-> 1. [Scripts](#scripts)
+> 1. [Вступление](#introduction)
+> 1. [Структура проекта](#structure)
+> 1. [Скрипты](#scripts)
 > 1. [Asset Naming Conventions](#anc)
 > 1. [Asset Workflows](#asset-workflows)
 
 <a name="introduction"></a>
-## 1. Introduction
+## 1. Вступление
 
-### Sections
+### Разделы
 
 > 1.1 [Style](#style)
 
-> 1.2 [Important Terminology](#importantterminology)
+> 1.2 [Терминология](#importantterminology)
 
 <a name="style"></a>
 ### 1.1 Style
@@ -31,24 +30,17 @@ Style guides should be living documents however and you should propose style gui
 > ##### *Arguments over style are pointless. There should be a style guide, and you should follow it.*
 > [_Rebecca Murphey_](https://rmurphey.com)
 
-#### All structure, assets, and code in any project should look like a single person created it, no matter how many people contributed.
-Moving from one project to another should not cause a re-learning of style and structure. Conforming to a style guide removes unneeded guesswork and ambiguities.
+#### Структура, ассеты и код в любом проекте должны выглядеть как-будто созданные одним человеком, вне зависимости от того сколько людей над ним работали.
+Переход от одного проекта к другому не должен приводить к повторному изучению стиля и структуры. Следование style guide устраняет ненужные догадки и двусмысленности.
 
-It also allows for more productive creation and maintenance as one does not need to think about style, simply follow instructions. This style guide is written with best practices in mind, meaning that by following this style guide you will also minimize hard to track issues.
-
-#### Friends do not let friends have bad style.
-If you see someone working either against a style guide or no style guide, try to correct them.
-
-When working within a team or discussing within a community, it is far easier to help and to ask for help when people are consistent. Nobody likes to help untangle someone's spaghetti code or deal with assets with names they can't understand.
-
-If you are helping someone who's work conforms to a different but consistent and sane style guide, you should be able to adapt to it. If they do not conform to any style guide, please direct them here.
+Это также позволяет более продуктивно создавать и поддерживать проекты, поскольку не нужно думать о стиле, нужно просто следовать инструкциям.
 
 <a name="importantterminology"></a>
-### 1.2 Important Terminology
+### 1.2 Терминология
 
 <a name="terms-prefab"></a>
-#### Prefabs
-Unity uses the term Prefab for a system that allows you to create, configure, and store a GameObject complete with all its components, property values, and child GameObjects as a reusable Asset.
+#### Префабы
+Unity использует термин Prefab для обозначения системы, которая позволяет создавать, настраивать и хранить GameObject со всеми его компонентами, значениями свойств и дочерними GameObject в качестве повторно используемого ассета.
 
 <a name="terms-level-map"></a>
 #### Levels/Maps/Scene
@@ -180,19 +172,19 @@ The reasons for this structure are listed in the following sub-sections.
 
 <a name="2.1"></a>
 <a name="structure-folder-names"><a>
-### 2.1 Folder Names
-These are common rules for naming any folder in the content structure.
+### 2.1 Имена папок
+Это общие правила именования всех папок в структуре проекта.
 
 <a name="2.1.1"></a>
-#### Always Use [PascalCase](#terms-cases)
+#### Всегда используйте [PascalCase](#terms-cases)
 PascalCase refers to starting a name with a capital letter and then instead of using spaces, every following word also starts with a capital letter. For example, `DesertEagle`, `RocketPistol`, and `ASeriesOfWords`.
 
 <a name="2.1.2"></a>
-#### Never Use Spaces
+#### Никогда не используйте пробелы
 Re-enforcing [2.1.1](#2.1.1), never use spaces. Spaces can cause various engineering tools and batch processes to fail. Ideally your project's root also contains no spaces and is located somewhere such as `D:\Project` instead of `C:\Users\My Name\My Documents\Unity Projects`.
 
 <a name="2.1.3"></a>
-#### Never Use Unicode Characters And Other Symbols
+#### Никогда не используйте символы Юникода и прочие нестандартные символы
 If one of your game characters is named 'Zoë', its folder name should be `Zoe`. Unicode characters can be worse than [Spaces](#2.1.2) for engineering tools and some parts applications don't support Unicode characters in paths either.
 
 Related to this, if your project has and your computer's user name has a Unicode character (i.e. your name is `Zoë`), any project located in your `My Documents` folder will suffer from this issue. Often simply moving your project to something like `D:\Project` will fix these mysterious issues.
@@ -200,7 +192,7 @@ Related to this, if your project has and your computer's user name has a Unicode
 Using other characters outside `a-z`, `A-Z`, and `0-9` such as `@`, `-`, `_`, `,`, `*`, and `#` can also lead to unexpected and hard to track issues on other platforms, source control, and weaker engineering tools. 
 
 <a name="structure-no-empty-folders"></a>
-#### No Empty Folders
+#### Не оставляйте пустых папок
 There simply shouldn't be any empty folders. They clutter the content browser.
 
 If you find that the content browser has an empty folder you can't delete, you should perform the following:
